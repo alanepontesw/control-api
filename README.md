@@ -15,21 +15,28 @@ src/
 - infrastructure/ 
   
 ### Using Scripts to Gitflow
+
+Make sure you have permissions for all files
+```
+$ chmod +x ./feature.sh (...)
+```
+
+```
 To create a new feature-branch:
+$ ./feature.sh "feature-name"
 
-$ ./feature.sh "nome-da-feature"
 To commit in the current branch:
+$ ./commit.sh "commit-message"
 
-$ ./commit.sh "mensagem-de-commit"
 To make a hot fix (branch master only):
+$ ./hotfix "hotfix-name"
 
-$ ./hotfix "fix-name"
 To push in the current branch:
-
 $ ./push
-To synchronize the flow of new commits in order to avoid possible conflicts:
 
+To synchronize the flow of new commits in order to avoid possible conflicts:
 $ ./sincflow
+```
 
 ### CI/CD
 Using Travis, for now, just have continuos integration
@@ -54,14 +61,20 @@ You will need to install in your machine the following packages:
 - coverage
 
 Installation via pip:
-```rootdir$ pip install -r requirements/develop.txt```
+
+```
+$ pip install -r requirements/develop.txt
+```
 
 If you'd like up and running using Docker, please, be sure you have:
 - Docker
 - Docker Compose 
 
 Up and Running via Docker Compose:
-```rootdir$ docker-compose up```
+
+```
+$ docker-compose up
+```
 
 ### Envs
     PYTHONPATH - It's the path to source app (src/)
@@ -77,24 +90,29 @@ A step by step series of examples that tell you how to get a development env run
 Be sure you have exported all env vars
 
 ```
-rootdir$ pip install -r requirements/develop.txt
-rootdir$ python src/core.py
+$ pip install -r requirements/develop.txt
+$ python src/core.py
 ```
 
 Or, you can easily use Docker Compose
+
 ```
-rootdir$ docker-compose up
+$ docker-compose up
 ```
 
 ## Running the tests
 
 To execute the tests, run:
 
-```rootdir$ pytest tests```
+```
+$ pytest tests
+```
 
 Be sure, have installed all libraries using:
 
-```rootdir$ pip install -r requirements/develop.txt```
+```
+$ pip install -r requirements/develop.txt
+```
 
 It's also necessary to export the environment variables described above.
 
@@ -103,7 +121,7 @@ It's also necessary to export the environment variables described above.
 To run lint for your code, execute:
 
 ```
-rootdir$ pylint src/ tests/
+$ pylint src/ tests/
 ```
 
 ## Deployment

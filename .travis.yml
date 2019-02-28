@@ -11,5 +11,5 @@ env:
   REDIS_PASSWORD=
   REDIS_PORT=6379
 script:
-  - pylint src/ tests/
+  - pylint src/ src/tests/
   - pytest tests

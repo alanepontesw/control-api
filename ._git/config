@@ -1,0 +1,11 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/alanepontesw/control-api.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[user]
+	name = Alane Pontes
+	email = alanepontes@gmail.com

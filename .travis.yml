@@ -1,0 +1,15 @@
+language: python
+python:
+  - "3.5"
+before_script:
+  - export PYTHONPATH=$PYTHONPATH:$(pwd)/src/
+install:
+  - export PYTHONPATH=$PYTHONPATH:$(pwd)/src/
+  - pip install -r requirements/develop.txt
+env:
+  REDIS_HOST=127.0.0.1
+  REDIS_PASSWORD=
+  REDIS_PORT=6379
+script:
+  - pylint src/ tests/
+  - pytest tests

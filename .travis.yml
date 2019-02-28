@@ -12,4 +12,4 @@ env:
   REDIS_PORT=6379
 script:
   - pylint src/ src/tests/
-  - pytest tests
+  - pytest src/tests

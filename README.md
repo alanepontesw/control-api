@@ -105,7 +105,7 @@ $ docker-compose up
 To execute the tests, run:
 
 ```
-$ pytest tests
+$ pytest src/tests
 ```
 
 Be sure, have installed all libraries using:

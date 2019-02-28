@@ -1,8 +1,6 @@
 [![Build Status](https://travis-ci.org/alanepontesw/control-api.svg?branch=master)](https://travis-ci.org/alanepontesw/control-api)
 
-# Project Title
-
-Manager API Request
+# Manager API Request
 
 ## Base structure
 

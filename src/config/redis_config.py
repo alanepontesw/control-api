@@ -1,5 +1,6 @@
 import os
 
+# TODO: Handler with multi envs
 class RedisConfig:
     HOST = os.environ.get('REDIS_HOST') or '127.0.0.1'
     PASSWORD = os.environ.get('REDIS_PASSWORD')

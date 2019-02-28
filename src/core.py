@@ -3,6 +3,7 @@ from flask_restful import Resource, request
 from interface.restful import APP, API
 from domain.control_api import ControlAPI
 from domain.request import Request
+from config.control_api_config import ControlAPIConfig
 
 class Product(Resource):
 
@@ -16,5 +17,5 @@ class Product(Resource):
 API.add_resource(Product, '/v1/products')
 
 if __name__ == '__main__':
-    APP.run(host='0.0.0.0')
+    APP.run(host=ControlAPIConfig.HOST)
     

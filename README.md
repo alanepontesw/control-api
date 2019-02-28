@@ -80,6 +80,8 @@ $ docker-compose up
     REDIS_HOST - It's the host running redis-server
     REDIS_PASSWORD - It's password to connect to Redis, if you have one.
     REDIS_PORT - Specifies the port for the connection.
+    HOST_API - It's host running API
+    TTL_REQUEST_API - Specifies the time that API must denied same body and method by requestconnection.
 
 ### Installing
 
@@ -120,6 +122,12 @@ To run lint for your code, execute:
 
 ```
 $ pylint src/ tests/
+```
+
+## Sample cosuming
+
+```
+$curl -XPOST http://localhost:5000/v1/products  -d '[{"name": "alane", "id": "1"}]'
 ```
 
 ## Deployment

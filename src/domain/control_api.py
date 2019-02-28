@@ -1,9 +1,10 @@
 import pickle
 from infrastructure.database.redis_client import RedisClient
+from config.control_api_config import ControlAPIConfig
 
 class ControlAPI:
 
-    def __init__(self, redis_client=RedisClient(), ttl=10*60):
+    def __init__(self, redis_client=RedisClient(), ttl=ControlAPIConfig.TTL_REQUEST_API):
         self.redis_client = redis_client
         self.ttl = ttl
 
